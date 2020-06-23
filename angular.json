@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "AngularAppFrontToBack"
+    }
+  },
+  "defaultProject": "AngularAppFrontToBack",
+  "cli": {
+    "analytics": false
+  }
 }
