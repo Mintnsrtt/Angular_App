@@ -12,22 +12,17 @@ export class UserComponent {
     fristName = 'Mint';
     lastName = 'Phon';
     age = 25;
+    address = {
+      street: '770,772 Phunnawiti',
+      city: 'BKK'
+    };
 
     //Metthods
     constructor() {
-      // console.log('Hello User...');
-      // this.sayHello();
-      console.log(this.age);
-      this.hasBirthday();
-      console.log(this.age);
+
     }
 
-    sayHello() {
-      console.log(`Hello ${this.fristName}`);
-      // console.log('Hello ' + '' + this.fristName);
-    }
-
-    hasBirthday() {
-      this.age += 1;
+    showAge() {
+      return this.age + 2;
     }
 }
