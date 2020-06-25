@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../../models/User';
+
+import { User } from '../../models/User'; 
 
 @Component({
   selector: 'app-users',
@@ -7,55 +8,57 @@ import { User } from '../../models/User';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-
   users: User[];
+  showExtended: boolean = true;
+  loaded: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
+   
       this.users = [
         {
-          firstName: 'Mint',
-          lastName: 'Phon',
-          age: 25,
-          address: {
-            street: '770,772 Phunnawiti',
-            city: 'BKK'
-          }
-        },
-        {
-          firstName: 'Fern',
-          lastName: 'Than',
-          age: 24,
-          address: {
-            street: '896 Phunnawiti',
-            city: 'BKK'
-          }
-        },
-        {
-          firstName: 'Kukkaii',
-          lastName: 'M.',
+          firstName: 'John',
+          lastName: 'Doe',
           age: 30,
           address: {
-            street: '99 Phonnadee',
-            city: 'Kalasin'
+            street: '50 Main st',
+            city: 'Boston',
+            state: 'MA'
+          }
+        },
+        {
+          firstName: 'Kevin',
+          lastName: 'Johnson',
+          age: 34,
+          address: {
+            street: '20 School st',
+            city: 'Lynn',
+            state: 'MA'
+          }
+        },
+        {
+          firstName: 'Karen',
+          lastName: 'Williams',
+          age: 26,
+          address: {
+            street: '55 Mill st',
+            city: 'Miami',
+            state: 'FL'
           }
         }
       ];
 
+      this.loaded = true;
+
       this.addUser({
-        firstName: 'Jane',
-        lastName: 'K.',
-        age: 20,
-        address: {
-          street: 'Bangkok',
-          city: 'BKK'
-        }
+        firstName: 'David',
+        lastName: 'Jackson'
       });
   }
 
   addUser(user: User) {
     this.users.push(user);
   }
-
+  
 }
